@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="icon" type="image/png" href="{{ asset('favicon.ico') }}">
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
-    <script type="text/javascript" src="{{ mix(config('alpine')) }}" defer></script>
+    <script type="text/javascript" src="{{ mix(config('dashui.alpine')) }}" defer></script>
     @stack('head')
-    <link rel="stylesheet" href="{{ mix(config('tailwind')) }}">
+    <link rel="stylesheet" href="{{ mix(config('dashui.tailwind')) }}">
     @livewireStyles
 </head>
 <body class="font-sans @if(\Illuminate\Support\Facades\App::environment('local')) debug-screens @endif">
@@ -30,7 +30,7 @@
                         </svg>
                     </button>
                 </div>
-                @includeIf(config('dash.menu'))
+                @includeIf(config('dashui.menu'))
             </div>
             <div class="shrink-0 w-14" aria-hidden="true">
                 <!-- Dummy element to force sidebar to shrink to fit close icon -->
@@ -40,8 +40,8 @@
     <!-- Static sidebar for desktop -->
     <div class="hidden lg:flex lg:shrink-0">
         <div class="flex flex-col w-80">
-            <div class="flex flex-col flex-grow border-r border-gray-200 bg-white overflow-y-auto">
-                @includeIf(config('dash.menu'))
+            <div class="flex flex-col grow border-r border-gray-200 bg-white overflow-y-auto">
+                @includeIf(config('dashui.menu'))
             </div>
         </div>
     </div>
@@ -53,7 +53,7 @@
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7"></path>
                 </svg>
             </button>
-            @includeIf(config('dash.top-bar'))
+            @includeIf(config('dashui.top-bar'))
         </div>
         <main class="flex-1 relative overflow-y-auto focus:outline-none">
             @yield('content')

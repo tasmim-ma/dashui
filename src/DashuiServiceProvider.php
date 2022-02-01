@@ -4,6 +4,19 @@ namespace Tasmim\Dashui;
 
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
+use Tasmim\Dashui\Components\Alert;
+use Tasmim\Dashui\Components\Avatar;
+use Tasmim\Dashui\Components\BlankImage;
+use Tasmim\Dashui\Components\BlankState;
+use Tasmim\Dashui\Components\ConfirmModal;
+use Tasmim\Dashui\Components\DeleteModal;
+use Tasmim\Dashui\Components\LayoutForm;
+use Tasmim\Dashui\Components\LayoutIndex;
+use Tasmim\Dashui\Components\LayoutMedium;
+use Tasmim\Dashui\Components\LayoutSmall;
+use Tasmim\Dashui\Components\LayoutWide;
+use Tasmim\Dashui\Components\Message;
+use Tasmim\Dashui\Components\Warning;
 
 class DashuiServiceProvider extends PackageServiceProvider
 {
@@ -12,6 +25,22 @@ class DashuiServiceProvider extends PackageServiceProvider
         $package
             ->name('dashui')
             ->hasConfigFile()
+            ->hasViewComponents(
+                'dashui',
+                Alert::class,
+                Message::class,
+                BlankImage::class,
+                Warning::class,
+                BlankState::class,
+                DeleteModal::class,
+                ConfirmModal::class,
+                Avatar::class,
+                LayoutIndex::class,
+                LayoutForm::class,
+                LayoutWide::class,
+                LayoutMedium::class,
+                LayoutSmall::class
+            )
             ->hasViews();
     }
 }
