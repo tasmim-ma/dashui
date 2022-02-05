@@ -10,12 +10,14 @@ use Tasmim\Dashui\Components\BlankImage;
 use Tasmim\Dashui\Components\BlankState;
 use Tasmim\Dashui\Components\ConfirmModal;
 use Tasmim\Dashui\Components\DeleteModal;
+use Tasmim\Dashui\Components\EmptyState;
 use Tasmim\Dashui\Components\LayoutForm;
 use Tasmim\Dashui\Components\LayoutIndex;
 use Tasmim\Dashui\Components\LayoutMedium;
 use Tasmim\Dashui\Components\LayoutSmall;
 use Tasmim\Dashui\Components\LayoutWide;
 use Tasmim\Dashui\Components\Message;
+use Tasmim\Dashui\Components\Rating;
 use Tasmim\Dashui\Components\Warning;
 
 class DashuiServiceProvider extends PackageServiceProvider
@@ -32,9 +34,11 @@ class DashuiServiceProvider extends PackageServiceProvider
                 BlankImage::class,
                 Warning::class,
                 BlankState::class,
+                EmptyState::class,
                 DeleteModal::class,
                 ConfirmModal::class,
                 Avatar::class,
+                Rating::class,
                 LayoutIndex::class,
                 LayoutForm::class,
                 LayoutWide::class,
