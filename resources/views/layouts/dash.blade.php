@@ -4,7 +4,7 @@
     <title>@yield('title') | {{ config('app.name') }}</title>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="icon" type="image/png" href="{{ asset('favicon.ico') }}">
+    <link rel="icon" type="image/png" href="{{ url('favicon.ico') }}">
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
     <script type="text/javascript" src="{{ mix(config('dashui.alpine')) }}" defer></script>
     @stack('head')
