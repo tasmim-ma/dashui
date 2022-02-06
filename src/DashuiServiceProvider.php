@@ -8,6 +8,7 @@ use Tasmim\Dashui\Components\Alert;
 use Tasmim\Dashui\Components\Avatar;
 use Tasmim\Dashui\Components\BlankImage;
 use Tasmim\Dashui\Components\BlankState;
+use Tasmim\Dashui\Components\CircularAvatar;
 use Tasmim\Dashui\Components\ConfirmModal;
 use Tasmim\Dashui\Components\DeleteModal;
 use Tasmim\Dashui\Components\EmptyState;
@@ -38,6 +39,7 @@ class DashuiServiceProvider extends PackageServiceProvider
                 DeleteModal::class,
                 ConfirmModal::class,
                 Avatar::class,
+                CircularAvatar::class,
                 Rating::class,
                 LayoutIndex::class,
                 LayoutForm::class,
