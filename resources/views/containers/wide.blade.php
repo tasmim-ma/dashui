@@ -1,5 +1,5 @@
 <div {{ $attributes }}>
-    <div class="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
+    <div class="px-4 py-8 mx-auto max-w-7xl sm:px-6 lg:px-8">
         {{ $slot }}
     </div>
 </div>

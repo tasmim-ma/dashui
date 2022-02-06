@@ -10,7 +10,7 @@
     {!! htmlScriptTagJsApi(['action' => 'loginDashboard']) !!}
 </head>
 <body>
-<div class="min-h-screen bg-gray-50 flex flex-col justify-center py-12 sm:px-6 lg:px-8">
+<div class="flex flex-col justify-center py-12 min-h-screen bg-gray-50 sm:px-6 lg:px-8">
     @yield('content')
 </div>
 </body>
